@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Digital</title>
+    <!-- Estilos CSS integrados para darle el aspecto oscuro y elegante -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .logo-container img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+        p.subtitle {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+        /* Barra de búsqueda */
+        .search-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            background-color: #1e1e1e;
+            border: 1px solid #333333;
+            border-radius: 25px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-box:focus {
+            border-color: #d4af37;
+        }
+        /* Cuadrícula de Categorías (Grid) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #1c1c1c;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f39c12;
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background-color: #2a2a2a;
+        }
+        .card-body {
+            padding: 15px;
+            text-align: left;
+        }
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        .card-stock {
+            font-size: 0.85rem;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="logo-container">
+            <!-- Reemplaza el enlace src con el logo de tu negocio si lo deseas -->
+            <img src="https://via.placeholder.com/80" alt="Logo">
+        </div>
+        <h1>Nuestros Catálogos</h1>
+        <p class="subtitle">Explora nuestras colecciones exclusivas</p>
+    </header>
+
+    <!-- Buscador -->
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="🔍 Buscar productos por nombre, descripción...">
+    </div>
+
+    <!-- Tarjetas de Categorías -->
+    <div class="grid-container">
+        
+        <!-- Categoría 1 -->
+        <div class="card" onclick="window.open('https://wa.me/TuNumeroDeWhatsApp?text=Hola,%20me%20interesa%20ver%20Perfumería%20Árabe', '_blank')">
+            <span class="card-badge">Popular</span>
+            <img src="https://via.placeholder.com/300x160" alt="Perfumería Árabe" class="card-img">
+            <div class="card-body">
+                <div class="card-title">PERFUMERÍA ÁRABE</div>
+                <div class="card-stock">300 productos disponibles</div>
+            </div>
+        </div>
+
+        <!-- Categoría 2 -->
+        <div class="card" onclick="window.open('https://wa.me/TuNumeroDeWhatsApp?text=Hola,%20me%20interesa%20ver%20Perfumería%20de%20Diseñador', '_blank')">
+            <span class="card-badge" style="background-color: #f1c40f;">Tendencia</span>
+            <img src="https://via.placeholder.com/300x160" alt="Perfumería Diseñador" class="card-img">
+            <div class="card-body">
+                <div class="card-title">PERFUMERÍA DISEÑADOR</div>
+                <div class="card-stock">112 productos disponibles</div>
+            </div>
+        </div>
+
+        <!-- Categoría 3 -->
+        <div class="card" onclick="window.open('https://wa.me/TuNumeroDeWhatsApp?text=Hola,%20me%20interesa%20ver%20Decants', '_blank')">
+            <span class="card-badge" style="background-color: #e67e22; color: #fff;">Nuevo</span>
+            <img src="https://via.placeholder.com/300x160" alt="Decants" class="card-img">
+            <div class="card-body">
+                <div class="card-title">DECANTS</div>
+                <div class="card-stock">145 productos disponibles</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
